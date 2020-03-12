@@ -16,3 +16,6 @@ git remote add origin git@github.com:username/projectname.git
 
 # push your commits
 git push -u origin master
+
+# push using your personal access token in private repo
+git remote set-url origin https://personal-access-token@github.com/account-name/repo-name
