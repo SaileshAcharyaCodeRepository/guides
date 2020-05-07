@@ -19,3 +19,8 @@ git push -u origin master
 
 # push using your personal access token in private repo
 git remote set-url origin https://personal-access-token@github.com/account-name/repo-name
+
+
+# force pull to override from github repo
+git fetch --all
+git reset --hard origin/master
