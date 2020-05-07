@@ -1,12 +1,12 @@
 
-git remote add
+# git remote add
 
 $ git remote add origin url
 
-check remote 
+# check remote 
 $ git remote -v
 
-command line for creating new repo
+# command line for creating new repo
 
 # create a new repo, will ask for password
 curl -u 'username' https://api.github.com/user/repos -d '{"name":"projectname","description":"This project is a decription for a new repo"}'
