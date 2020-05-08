@@ -1,2 +1,5 @@
 cut videos of this length. from input 
 ffmpeg -i DSC_7854.MOV -vcodec copy -acodec copy -ss 00:00:02.000 -t 00:15:43.000 output.MOV
+
+concat two videos ffmpeg
+ffmpeg -f concat -safe 0 -i mylist.txt -c copy output.MOV
