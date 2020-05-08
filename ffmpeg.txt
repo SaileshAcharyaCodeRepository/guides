@@ -1,1 +1,2 @@
 
+remove seconds from the begining of the video with audio
