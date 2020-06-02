@@ -1,0 +1,17 @@
+
+sftp
+
+sftp <username>@<domain url>
+
+quit :to quit
+
+get	 :transfer file from remote to local
+
+put  : transfer file from local to remote
+
+lpwd  : local working directory
+
+pwd   : remote working directory
+
+lcd downloads : change download target location
+
