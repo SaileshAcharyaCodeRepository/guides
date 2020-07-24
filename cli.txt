@@ -3,9 +3,9 @@ sftp
 
 sftp <username>@<domain url>
 
-quit :to quit
+quit : to quit
 
-get	 :transfer file from remote to local
+get	 : transfer file from remote to local
 
 put  : transfer file from local to remote
 
@@ -15,3 +15,45 @@ pwd   : remote working directory
 
 lcd downloads : change download target location
 
+ls -la : list all files with access info, human readable and hidden files
+
+tar -czvf name-of-archive.tar.gz /path/to/directory-or-file
+
+	-c: Create an archive.
+	-z: Compress the archive with gzip.
+	-v: Display progress in the terminal while creating the archive, also known as “verbose” mode. The v is always optional in these commands, but it’s helpful.
+	-f: Allows you to specify the filename of the archive.
+
+pscp filelocation sachary4@zeus.vse.gmu.edu:destinationlocation : (transfer file to server from command line)
+pscp sachary4@zeus.vse.gmu.edu:destinationlocation sourcelocation : (transfer file from zues from command line)
+
+pscp sachary4@zeus.vse.gmu.edu:/home/sachary4/CS262/lab5_sachary4_2B2/lab5_sachary4_2B2.tar C:\Users\Sailesh\Downloads\personal_downloads\lab5_sachary4_2B2\ : tranfer file from zues (from command lin
+
+
+touch filename.extension : create a file 
+
+
+fgets places the "\n" (newline) at the end of the line. Thus if we type in "hello", what really goes into the variable line is [ 'h', 'e', 'l', 'l', 'o', '\n', '\0' ]
+
+while ( fgets( line, 100, stdin ) != null ) 
+            { 
+              fprintf("The line is: %s\n", line); 
+            }
+			
+gcc -g -Wall -std=c89 -pedantic-errors -o lab lab5_sachary4_2B2.c
+	
+
+  &nbsp;&nbsp;&nbsp;&nbsp;<U></U>&nbsp;&nbsp;&nbsp;&nbsp;
+  
+  
+  ar rc libProject1.a ../obj/*.o
+  
+	gcc -o bin/Project1_from_lib -I./inc src/Project1.c -L./lib -lProject1
+	
+	
+        rm -f $(OBJS) ./bin/*.* ./lib/*.a
+        rm -f $(OBJS) $(BINDIR)/project_1 $(BINDIR)/Project1_from_lib
+
+	
+
+  

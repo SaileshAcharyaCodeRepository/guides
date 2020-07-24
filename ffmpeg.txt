@@ -1,8 +1,30 @@
+ffmpeg convert images to video
+
+
+
+ffmpeg add text and logo
+
+	ffmpeg -i video.mp4 -i logo.png -filter_complex "[0:v][1:v]overlay=10:10,drawtext=text='Hello World'" -c:a copy -movflags +faststart output.mp4
+Centered
+	ffmpeg -i input.mp4 -vf "drawtext=text='Your Text':x=(w-text_w)/2:y=(h-text_h)/2:fontsize=24:fontcolor=black" -c:a copy output.mp4
+Top Right
+	ffmpeg -i inputVideo.mp4 -vf "drawtext=text='Super User':x=w-tw-10:y=10:fontsize=12:fontcolor=black" -c:a copy outputTopRight.mp4
+	
+	Positions
+	Top left: x=0:y=0 (with 10 pixel padding x=10:y=10)
+	Top center: x=(w-text_w)/2:y=0 (with 10 px padding x=(w-text_w)/2:y=10)
+	Top right: x=w-tw:y=0 (with 10 px padding: x=w-tw-10:y=10)
+	Centered: x=(w-text_w)/2:y=(h-text_h)/2
+	Bottom left: x=0:y=h-th (with 10 px padding: x=10:y=h-th-10)
+	Bottom center: x=(w-text_w)/2:y=h-th (with 10 px padding: x=(w-text_w)/2:y=h-th-10)
+	Bottom right: x=w-tw:y=h-th (with 10 px padding: x=w-tw-10:y=h-th-10)
+	
+
 cut videos of this length. from input 
-ffmpeg -i DSC_7854.MOV -vcodec copy -acodec copy -ss 00:00:02.000 -t 00:15:43.000 output.MOV
+	ffmpeg -i DSC_7854.MOV -vcodec copy -acodec copy -ss 00:00:02.000 -t 00:15:43.000 output.MOV
 
 concat two videos ffmpeg
-ffmpeg -f concat -safe 0 -i mylist.txt -c copy output.MOV
+	ffmpeg -f concat -safe 0 -i mylist.txt -c copy output.MOV
 
 mylist.txt file 
 'filename.extension'
