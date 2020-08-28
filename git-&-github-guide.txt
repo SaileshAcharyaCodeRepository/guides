@@ -1,6 +1,5 @@
 
 # git remote add
-
 $ git remote add origin url
 
 # check remote 
