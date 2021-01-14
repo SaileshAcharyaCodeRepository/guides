@@ -28,3 +28,30 @@ concat two videos ffmpeg
 
 mylist.txt file 
 'filename.extension'
+
+
+make video from images
+ffmpeg -framerate 1 -i C:/Users/saile/Desktop/Eclipse/Outputs/image%d.jpg C:/Users/saile/Desktop/Eclipse/videos/test.mp4
+
+make list of video
+(for %i in (*.mp4) do @echo file '%i') > mylist.txt
+
+make videos
+ffmpeg -f concat -i C:/Users/saile/Desktop/Eclipse/videos/mylist.txt -c copy output.mp4
+
+
+package videoMakerProject;
+
+import java.io.IOException;
+
+public class CommandLineExecution {
+
+	public static void main(String[] argv) {
+		try {
+			Runtime.getRuntime().exec("C:/Users/saile/Downloads/ffmpeg-20191001-c4de49e-win64-static/ffmpeg-20191001-c4de49e-win64-static/bin/ffmpeg -framerate 1 -i C:/Users/saile/Desktop/Eclipse/Outputs/image%d.jpg C:/Users/saile/Desktop/Eclipse/videos/test.mp4");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

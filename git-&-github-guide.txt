@@ -1,4 +1,45 @@
 
+
+Command Line Instructions
+
+	Git global setup
+	
+		git config --global user.name "sachary4"
+		git config --global user.name "1315-sachary4@users.noreply.git.gmu.edu"
+
+	
+Create a new repository
+
+	Clone a repo (example)
+	
+		git clone git@git.gmu.edu:sachary4/os161-1.11.git
+		git clone git@github.com:SaileshAcharyaCodeRepository/low_level_class_projects.git
+
+	git add README.md
+	git commit -, "add README"
+	git push -u origin master
+
+		
+Pushing an existing folder
+	
+	cd existing_folder
+	git init
+	git remote add origin git@git.gmu.edu:sachary4/os161-1.11.git
+	git add .
+	git commit -m "Initial commit"
+	git push -u origin master
+	
+	
+Push an existing Git repository
+
+	cd existing_repo
+	git remote rename origin old-origin
+	git remote add origin git@git.gmu.edu:sachary4/os161-1.11.git
+	git push -u origin --all
+	git push -u origin --tags
+	
+		
+
 # git remote add
 $ git remote add origin url
 

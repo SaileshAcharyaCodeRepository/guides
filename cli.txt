@@ -1,3 +1,10 @@
+sachary4@zeus.vse.gmu.edu
+sachary4@zeus-1.vse.gmu.edu
+sachary4@zeus-2.vse.gmu.edu
+
+target remote unix:.sockets/gdb
+
+grep -nirl "yourString" .
 
 sftp
 
@@ -23,12 +30,57 @@ tar -czvf name-of-archive.tar.gz /path/to/directory-or-file
 	-z: Compress the archive with gzip.
 	-v: Display progress in the terminal while creating the archive, also known as “verbose” mode. The v is always optional in these commands, but it’s helpful.
 	-f: Allows you to specify the filename of the archive.
+	
+	unpack a tar file
+		
+		tar xvf <filename.tar>
+	
+Valgrind
+	
+		valgrind -v --track-origins=yes --leak-check=full ./scheduler traces/trace2.dat
+
 
 pscp filelocation sachary4@zeus.vse.gmu.edu:destinationlocation : (transfer file to server from command line)
+
+	pscp p3_handout.tar sachary4@zeus-1.vse.gmu.edu:/home/sachary4/CS367/project_P3
+	
+	pscp shell.c sachary4@zeus.vse.gmu.edu:/home/sachary4/CS367/project_P3/p3_handout
+	
+	CS471
+	
+	pscp unistd.h sachary4@zeus.vse.gmu.edu:/home/sachary4/os161/os161-1.11/include/
+	
+	pscp callno.h sachary4@zeus.vse.gmu.edu:/home/sachary4/os161/os161-1.11/kern/include/kern/
+	
 pscp sachary4@zeus.vse.gmu.edu:destinationlocation sourcelocation : (transfer file from zues from command line)
 
-pscp sachary4@zeus.vse.gmu.edu:/home/sachary4/CS262/lab5_sachary4_2B2/lab5_sachary4_2B2.tar C:\Users\Sailesh\Downloads\personal_downloads\lab5_sachary4_2B2\ : tranfer file from zues (from command lin
+	CS367
+	
+	pscp sachary4@zeus.vse.gmu.edu:/home/sachary4/CS367/project_P3/p3_handout/shell.c D:\personal-workspace\low_level_class_projects\cs_367_Computer_Systems_and_Programming\Project_3\p3_handout\
+	
+	pscp -r sachary4@zeus.vse.gmu.edu:/home/sachary4/CS367/project_P3/p3_handout D:\personal-workspace\low_level_class_projects\cs_367_Computer_Systems_and_Programming\Project_3\
 
+	CS471
+	
+	pscp -r sachary4@zeus.vse.gmu.edu:/home/sachary4/os161/sachary4-asst1.tar.gz D:\personal-workspace\low_level_class_projects\cs_471_Operating_Systems\Project_1\
+	
+	pscp sachary4@zeus.vse.gmu.edu:/home/sachary4/os161/os161-1.11/kern/main/menu.c D:\personal-workspace\low_level_class_projects\cs_471_Operating_Systems\temp_P1\
+	
+	pscp sachary4@zeus.vse.gmu.edu:/home/sachary4/os161/asst2/code-walkthrough.txt D:\personal-workspace\low_level_class_projects\cs_471_Operating_Systems\Project_2\
+	
+
+
+module load sys161/1.14
+
+Change into your root directory and get the sys161.conf file
+	% cd ~/os161/root
+	% cp /opt/apps/sys161-1.14/sys161.conf.sample sys161.conf
+Run the machine simulator on your operating system.
+	% sys161 kernel
+	
+	
+
+find . -name filename.*
 
 touch filename.extension : create a file 
 
